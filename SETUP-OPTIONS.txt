@@ -1,0 +1,24 @@
+----- HTML
+
+** Referencing image file paths in src/template.html?
+    - run : npm install --save-dev html-loader
+    - include this in modules.rules array in webpack.common.js:
+{
+    test: /\.html$/i,
+    loader: "html-loader",
+}
+
+----- JS
+
+** Referencing image file paths in js with imports?
+    - include this in modules.rules array in webpack.common.js:
+{
+  test: /\.(png|svg|jpg|jpeg|gif)$/i,
+  type: "asset/resource",
+}
+    - then wherever you want to import that image, do this
+import odinImage from "./odin.png";
+   
+const image = document.createElement("img");
+image.src = odinImage;
+
