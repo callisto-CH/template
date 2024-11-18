@@ -22,3 +22,7 @@ import odinImage from "./odin.png";
 const image = document.createElement("img");
 image.src = odinImage;
 
+** Need to transpile code so that older browsers can understand it, or so you can use new features not yet supported by browsers?
+
+https://github.com/babel/babel-loader
+https://blog.jakoblind.no/babel-preset-env/
